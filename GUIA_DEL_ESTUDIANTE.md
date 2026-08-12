@@ -18,6 +18,19 @@ mitad de camino: las entregas se encadenan.
 
 ---
 
+## Por dónde se empieza
+
+En orden, sin saltear:
+
+1. **Cuaderno 0 — ¿De qué hablamos cuando hablamos de IA?** No tiene fórmulas ni
+   requisitos. Si nunca viste nada de inteligencia artificial, este es tu lugar.
+2. **Cuaderno 1 — Cómo leer un gráfico.** De acá en adelante casi todo lo que
+   tengas que decidir lo vas a decidir mirando un gráfico.
+3. **A-0 en adelante**, ya con tus propios datos.
+
+Los dos primeros se dan en clase y se discuten. No los hagas solo en tu casa: la
+mitad del valor está en escuchar en qué se equivocaron los demás.
+
 ## Cómo se trabaja
 
 ### El bucle de cada cuaderno
@@ -50,7 +63,7 @@ pesan en la evaluación.
 | `[A]` | Avanzado | Redactar una decisión fundamentada. Sin respuesta única. |
 
 **Todos los `[B]` y `[I]` son obligatorios.** De los `[A]`, son obligatorios los
-que están marcados como entrega de un módulo (A2.5, A4.4, A5.4, A7.4).
+que están marcados como entrega de un módulo (1.5, A2.5, A4.4, A5.4 y A7.4).
 
 ### Reglas de convivencia con Jupyter
 
@@ -81,6 +94,8 @@ escribas como si fueran ejercicios sueltos.
 
 | Ejercicio | Alimenta a |
 |---|---|
+| 0.4 — dónde entraría la IA en tu nodo | G-2, formulación de la tarea |
+| 1.5 — un gráfico de la calle, analizado | F-3, criterio de lectura |
 | A1.1 — PEAS de tu nodo | F-0, bloque 2 |
 | A2.1 — diccionario de variables | **F-1**, entrega completa |
 | A2.5 — párrafo "cómo se limpió" | **F-5**, sección 2 del informe |

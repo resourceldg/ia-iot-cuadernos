@@ -93,9 +93,11 @@ def a_notebook(celdas):
 
 def main():
     DESTINO.mkdir(exist_ok=True)
-    fuentes = sorted(f for f in FUENTES.glob("A*.py"))
+    # Los cuadernos de arranque empiezan con digito (00, 01) y el resto con "A".
+    # Se ordenan asi solos, que es justo el orden en que se dan.
+    fuentes = sorted(f for f in FUENTES.glob("*.py") if f.name != "build_notebooks.py")
     if not fuentes:
-        print("No se encontraron fuentes A*.py en", FUENTES)
+        print("No se encontraron fuentes en", FUENTES)
         return 1
     for fuente in fuentes:
         celdas = parsear(fuente.read_text(encoding="utf-8"))

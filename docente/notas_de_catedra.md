@@ -13,17 +13,102 @@ terminan en un resultado que contradice la expectativa.** Eso es deliberado. La
 competencia que se busca formar no es "saber usar scikit-learn", es **comparar
 contra un baseline y reportar lo que salió**.
 
+Los cuadernos **0** y **1** se agregaron después de la primera versión, por una
+razón concreta: los cuadernos A daban por sabido de qué se estaba hablando, y
+A-3 enseñaba a *hacer* gráficos sin que nadie hubiera enseñado a *leerlos*. Son
+las dos únicas piezas del anexo sin ningún requisito previo.
+
 Si hay que recortar por tiempo, el orden de prioridad es:
 
-1. **A-2** (dato) y **A-4** (métricas y baseline) — irrenunciables.
-2. **A-5** — tiene la idea más aprovechable para la carrera.
-3. **A-1**, **A-3** — cubren F-0 y F-3 directamente.
-4. **A-6**, **A-7** — teoría faltante; se pueden dar como unidad aparte.
-5. **A-8** — opcional.
+1. **Cuaderno 1** (leer gráficos) y **A-2** (dato) — irrenunciables. Sin el 1, el
+   resto del anexo se lee mal; sin el A-2, se construye sobre datos sucios.
+2. **A-4** (métricas y baseline) — irrenunciable si se va a hablar de modelos.
+3. **Cuaderno 0** — se puede dar comprimido en 45 minutos si el grupo ya viene
+   con nociones. No se puede saltear entero: instala el vocabulario.
+4. **A-5** — tiene la idea más aprovechable para la carrera.
+5. **A-1**, **A-3** — cubren F-0 y F-3 directamente.
+6. **A-6**, **A-7** — teoría faltante; se pueden dar como unidad aparte.
+7. **A-8** — opcional.
 
 ---
 
 ## Resultados que van a aparecer, cuaderno por cuaderno
+
+### Cuaderno 0 · ¿De qué hablamos cuando hablamos de IA?
+
+**El Bloque 1 es el que hace todo el trabajo.** El estudiante escribe un umbral,
+le sale, y se va confiado. Después se le da un conjunto de 14 filas donde
+**ninguna** regla de una sola variable acierta todo:
+
+| enfoque | aciertos |
+|---|---|
+| mejor umbral usando solo humedad | 11 / 14 |
+| mejor umbral usando solo temperatura | 9 / 14 |
+| árbol de decisión (profundidad 3) | **14 / 14** |
+
+El conjunto está armado a mano para eso: hay **dos filas con humedad 44**, una
+con regar=1 y otra con regar=0. Conviene señalarlo con el dedo, porque es la
+demostración visual de que una variable no alcanza.
+
+La regla que encuentra el árbol se lee limpia y se puede traducir al castellano
+en clase: *si la humedad está muy baja, regar; si no, regar sólo cuando haga
+calor y la humedad no esté alta.*
+
+**El Bloque 6 es el que más discusión genera.** Se construye un conjunto donde
+las plantas sanas se midieron un lunes y las secas un jueves, y la columna
+`dia_de_medicion` quedó en la tabla. El árbol saca **100 % de acierto mirando el
+calendario**. Es el mejor momento del cuatrimestre para instalar la idea de que
+leer las reglas del modelo es control de calidad y no curiosidad.
+
+El ejercicio 0.3 repite la jugada con `id_de_sensor` para que la resuelvan solos.
+
+**Ojo con el ejercicio 0.2** (¿reglas o aprendizaje?): la clave es
+`reglas, aprendizaje, reglas, aprendizaje, reglas, aprendizaje`. Alguno va a
+discutir el termostato o el semáforo, y tiene razón en que hay versiones
+modernas con aprendizaje. La discusión vale: lo que se evalúa es el criterio
+("¿podría un programador escribir todos los casos?"), no la respuesta.
+
+---
+
+### Cuaderno 1 · Cómo leer un gráfico
+
+**El cuarteto de Anscombe (Bloque 4) es el punto alto.** Los cuatro conjuntos dan
+exactamente los mismos números:
+
+| | I | II | III | IV |
+|---|---|---|---|---|
+| promedio de x | 9.00 | 9.00 | 9.00 | 9.00 |
+| promedio de y | 7.50 | 7.50 | 7.50 | 7.50 |
+| desvío de y | 2.03 | 2.03 | 2.03 | 2.03 |
+| correlación | 0.82 | 0.82 | 0.82 | 0.82 |
+
+Conviene mostrar **primero la tabla sola** y dejar que alguien diga "son el mismo
+conjunto", antes de pasar a la celda de los gráficos. El efecto se pierde si se
+ven las dos cosas juntas.
+
+Los conjuntos III y IV enganchan directo con A-2: **un solo dato manda**. No te
+corre el promedio un poquito, te da vuelta la conclusión.
+
+**El Bloque 5** (promedio contra mediana) usa tiempos de respuesta con cola
+larga: mediana 46 ms, promedio 89 ms, percentil 95 en 381 ms. El ejercicio 1.4
+hace calcular qué porcentaje de las respuestas tardó menos que el promedio — da
+alrededor del 90 %. Ahí se entiende de una que "el promedio no describe a casi
+nadie".
+
+El histograma va en dos paneles a propósito: el de rango completo es ilegible, y
+eso **es** la lección.
+
+**En el ejercicio 1.3** la verificación acepta 3 o 7 episodios. Los 3 grandes son
+los que cruzan el umbral; los 4 chicos son los arranques falsos que en A-4 van a
+impedir resolver el problema con un umbral. Quien cuenta 7 tiene mejor ojo, y el
+cuaderno se lo dice.
+
+**El ejercicio 1.5** (traer un gráfico de afuera de la materia) es entrega
+obligatoria y es la que mejor discrimina de todo el anexo. El punto 5 —escribir
+la afirmación que el gráfico soporta *de verdad*— suele salir bastante más
+modesta que el titular que lo acompañaba.
+
+---
 
 ### A-0 · Entorno
 

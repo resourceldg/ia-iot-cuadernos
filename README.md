@@ -8,7 +8,7 @@ ISFT N.º 238 — Prof. Lucas Daniel Gómez
 
 ## Qué es esto
 
-Nueve cuadernos de Jupyter que acompañan al **Cuadernillo del Trayecto F**
+Once cuadernos de Jupyter que acompañan al **Cuadernillo del Trayecto F**
 (módulos F-0 a F-5) y a la parte de aprendizaje automático del **Trayecto G**
 (módulos G-2 y G-3).
 
@@ -54,6 +54,9 @@ jupyter lab notebooks/
 Abrí `notebooks/A0_Entorno_y_herramientas.ipynb` y ejecutá las dos primeras
 celdas. Si ves cuatro líneas con `OK`, está todo listo.
 
+Para dar clase, en cambio, se empieza por `notebooks/00_…` y `notebooks/01_…`,
+que son los dos cuadernos de arranque.
+
 ### Problemas frecuentes
 
 | Síntoma | Causa y solución |
@@ -66,10 +69,17 @@ celdas. Si ves cuatro líneas con `OK`, está todo listo.
 
 ---
 
-## Los nueve cuadernos
+## Los once cuadernos
+
+Los dos primeros son de **arranque**: no suponen nada previo, no tienen fórmulas
+y se dan antes que todo lo demás. Nacieron de una constatación del ciclo 2026:
+los cuadernos A daban por sabido de qué se estaba hablando, y enseñaban a
+*hacer* gráficos sin haber enseñado nunca a *leerlos*.
 
 | # | Cuaderno | Vinculación | Duración | Contenido central |
 |---|---|---|---|---|
+| **0** | ¿De qué hablamos cuando hablamos de IA? | arranque | 100 min | Qué es y qué no; las muñecas rusas; cinco mitos; historia en cinco momentos; dónde entra la IA en tu nodo |
+| **1** | Cómo leer un gráfico | arranque | 100 min | El protocolo de los cinco segundos; tendencia contra ruido; el cuarteto de Anscombe; nueve formas de engañar sin datos falsos |
 | **A-0** | Entorno y herramientas | previo a F-0 | 90 min | NumPy, pandas, los tres conjuntos de datos |
 | **A-1** | Agentes y reglas | **F-0** | 120 min | PEAS, tipos de agente, motor de inferencia IF-THEN |
 | **A-2** | Ciclo de vida del dato | **F-1, F-2** | 150 min | Diccionario de variables, los 4 datos inválidos, limpieza |
@@ -80,14 +90,14 @@ celdas. Si ves cuatro líneas con `OK`, está todo listo.
 | **A-7** | Modelo de lenguaje diminuto | profundización | 150 min | Bigramas, embeddings, softmax, temperatura, perplejidad |
 | **A-8** | LLM local *(opcional)* | ampliación | 90 min | Correr un modelo real de 135M en tu máquina |
 
-Total: unas **20 horas** de trabajo en el aula, distribuibles a lo largo del
+Total: unas **23 horas** de trabajo en el aula, distribuibles a lo largo del
 cuatrimestre según el calendario de los módulos F.
 
 ### Correspondencia con el cronograma del cuadernillo
 
 | Semana | Módulo del cuadernillo | Cuaderno del anexo |
 |---|---|---|
-| 1 | — | A-0 |
+| 1 | — | **0**, **1** y A-0 |
 | 2 | F-0 | A-1 |
 | 3 y 4 | F-1 | A-2 (primera parte) |
 | 6 | F-2 | A-2 (segunda parte) |
@@ -95,6 +105,10 @@ cuatrimestre según el calendario de los módulos F.
 | 13 | G-2, F-3 | A-4 |
 | 13 y 14 | G-3 | A-5 |
 | — | ampliación | A-6, A-7, A-8 |
+
+Los cuadernos **0** y **1** van sí o sí antes que el resto: el 0 instala el
+vocabulario y el 1 la lectura de gráficos, y a partir de A-2 todo lo que hay que
+decidir se decide mirando un gráfico.
 
 Los cuadernos A-6, A-7 y A-8 no están atados a un módulo: son la profundización
 teórica que el primer cuatrimestre no alcanzó a cubrir. Se pueden dar como
@@ -145,6 +159,8 @@ Anexo_Practico_IA_2026/
 ├── requirements.txt
 ├── instalar.sh
 ├── notebooks/                   los .ipynb (acá trabaja el estudiante)
+│   ├── 00_… 01_…               los dos cuadernos de arranque
+│   ├── A0_… … A8_…             el recorrido principal
 │   └── estilo_grafico.py        paleta y estilo común de los gráficos
 ├── datos/
 │   ├── generar_datasets.py

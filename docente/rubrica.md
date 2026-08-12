@@ -32,13 +32,14 @@ técnico**, que se manifiesta en tres lugares:
 | Componente | Peso |
 |---|---|
 | Ejercicios `[B]` e `[I]` completos y ejecutados | 30 % |
-| Las cuatro entregas `[A]` obligatorias | 40 % |
+| Las cinco entregas `[A]` obligatorias | 40 % |
 | Coherencia entre los cuadernos y el informe F-5 | 20 % |
 | Defensa oral (5 minutos, cualquier cuaderno a elección del docente) | 10 % |
 
-Las cuatro entregas `[A]` obligatorias son: **A2.5** (reporte de calidad de
-datos), **A4.4** (costo del error y métrica), **A5.4** (decisión fundamentada
-reglas vs. modelo) y **A7.4** (ficha técnica del modelo).
+Las cinco entregas `[A]` obligatorias son: **1.5** (un gráfico de afuera de la
+materia, analizado con los cinco pasos), **A2.5** (reporte de calidad de datos),
+**A4.4** (costo del error y métrica), **A5.4** (decisión fundamentada reglas
+vs. modelo) y **A7.4** (ficha técnica del modelo).
 
 ---
 
@@ -48,7 +49,7 @@ reglas vs. modelo) y **A7.4** (ficha técnica del modelo).
 
 | Dimensión | Qué se espera |
 |---|---|
-| **Ejecución** | Los cuadernos A-0 a A-5 ejecutados de punta a punta, con salidas visibles. |
+| **Ejecución** | Los cuadernos 0, 1 y A-0 a A-5 ejecutados de punta a punta, con salidas visibles. |
 | **Ejercicios** | Todos los `[B]` y al menos el 70 % de los `[I]` en `[OK]`. |
 | **Diccionario de variables** | Completo, con las cuatro definiciones (variable, unidad, rango, frecuencia) para al menos dos variables. |
 | **Limpieza** | Aplicó las cuatro reglas del módulo F-2 y reporta cuántas lecturas descartó cada una. |
@@ -112,6 +113,7 @@ Cosas que conviene mirar específicamente, porque son fáciles de pasar por alto
 Cinco minutos, un cuaderno elegido por el docente. Tres preguntas que funcionan
 bien porque no se pueden contestar sin haber hecho el trabajo:
 
+0. *"Mostrame un gráfico de tu carpeta y aplicale los cinco pasos del Cuaderno 1."*
 1. *"Mostrame el número que más te sorprendió y explicame por qué."*
 2. *"Si tuvieras que bajar el umbral a la mitad, ¿qué pasaría con tu sistema y
    quién se quejaría?"*

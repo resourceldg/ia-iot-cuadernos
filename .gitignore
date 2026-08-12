@@ -1,0 +1,26 @@
+# Entornos virtuales
+entorno/
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb~
+
+# Salidas que genera el estudiante al trabajar
+notebooks/figuras/
+figuras/
+
+# Caché de modelos de A-8 (por si alguien la deja adentro del repo)
+.cache/
+models/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp

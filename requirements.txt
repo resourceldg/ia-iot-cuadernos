@@ -1,0 +1,25 @@
+# Anexo Práctico de IA — ISFT N.º 238, Trayecto F, 2026
+#
+# Instalación:
+#     python3 -m venv entorno
+#     source entorno/bin/activate      (Windows: entorno\Scripts\activate)
+#     pip install -r requirements.txt
+#
+# Verificado con Python 3.11 a 3.14.
+
+# --- Núcleo: cuadernos A-0 a A-7 ---
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+scikit-learn>=1.3
+
+# --- Entorno de trabajo ---
+jupyterlab>=4.0
+
+# --- Solo para el cuaderno A-8, que es OPCIONAL ---
+# Descomentá estas dos si vas a hacer A-8. Suman más de 1 GB de descarga.
+# Para instalar torch en su versión de CPU (mucho más liviana):
+#     pip install torch --index-url https://download.pytorch.org/whl/cpu
+#
+# torch>=2.0
+# transformers>=4.40
